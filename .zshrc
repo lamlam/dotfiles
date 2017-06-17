@@ -1,25 +1,17 @@
-#参考 https://gist.github.com/mollifier/4979906
-########################################
-# 環境変数
+##################################
 export LANG=ja_JP.UTF-8
 
 # for zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath) 
 
-# 色を使用出来るようにする
 autoload -Uz colors
 colors
 
-# emacs 風キーバインドにする
 bindkey -e
  
-# ヒストリの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
- 
-# プロンプト
-#PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~ %# "
 
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -33,19 +25,18 @@ RPROMPT=''
 # PATH
 PATH="/usr/local/bin/:${PATH}"
 
-########################################
-# 補完
+###################################
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit -u
  
-# 補完で小文字でも大文字にマッチさせる
+# 補完で小文字でも大文字にマッチ
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
  
 # ../ の後は今いるディレクトリを補完しない
 zstyle ':completion:*' ignore-parents parent pwd ..
  
-# sudo の後ろでコマンド名を補完する
+# sudo の後ろでコマンド名を補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                    /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
  
@@ -53,7 +44,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
  
 ########################################
-# オプション
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 

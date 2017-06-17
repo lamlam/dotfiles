@@ -2,3 +2,4 @@
 
 ln -s .zshrc ~/
 ln -s .vimrc ~/
+
