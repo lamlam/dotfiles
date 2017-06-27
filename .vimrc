@@ -3,20 +3,21 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/koikoi/dotfiles/.vim/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/dotfiles/.vim/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/koikoi/dotfiles/.vim')
-  call dein#begin('/Users/koikoi/dotfiles/.vim')
+if dein#load_state('~/dotfiles/.vim')
+  call dein#begin('~/dotfiles/.vim')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/koikoi/dotfiles/.vim/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/dotfiles/.vim/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/unite.vim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
