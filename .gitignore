@@ -1,2 +1,4 @@
-
-.vim
+.vim/repos
+.vim/cache_vim
+.vim/state_vim.vim
+.vim/.*
