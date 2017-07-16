@@ -1,13 +1,13 @@
 #!/bin/bash
 
-DOTDIR="~/dotfiles"
+DOTDIR=${HOME}/dotfiles
 
-ln -s ${DOTDIR}/zshrc ~/.zshrc
+ln -s ${DOTDIR}/zshrc ${HOME}/.zshrc
 
 if [ ! -e ~/.config ];then
     mkdir ~/.config
 fi
 
-ln -s ${DOTDIR}/nvim ~/.config/nvim
-ln -s ${DOTDIR}/nvim ~/.vim
-ln -s ${DOTDIR}/nvim/init.vim ~/.vimrc
+ln -s ${DOTDIR}/nvim ${HOME}/.config/nvim
+ln -s ${DOTDIR}/nvim ${HOME}/.vim
+ln -s ${DOTDIR}/nvim/init.vim ${HOME}/.vimrc
