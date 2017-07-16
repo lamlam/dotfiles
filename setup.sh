@@ -8,4 +8,4 @@ fi
 
 ln -s nvim ~/.config/nvim
 ln -s nvim ~/.vim
-ln -s ~/.config/nvim/init.vim ~/.vimrc
+ln -s nvim/init.vim ~/.vimrc
