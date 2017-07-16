@@ -23,7 +23,7 @@ PROMPT='[%n@%m]%{${fg[yellow]}%} %~ %{${reset_color}%}${vcs_info_msg_0_}
 RPROMPT=''
 
 # PATH
-PATH="/usr/local/bin/:${PATH}"
+PATH="/Users/koikoi/.rbenv/shims:/usr/local/bin/:${PATH}"
 
 ###################################
 # 補完機能を有効にする
@@ -81,7 +81,7 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
  
 # GNU grep をデフォルトで有効にする
-alias grep='ggrep'
+#alias grep='ggrep'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
