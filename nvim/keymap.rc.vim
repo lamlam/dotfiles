@@ -6,7 +6,6 @@ nmap <Up> <C-w>k
 nmap <Left> <C-w>h
 nmap <Right> <C-w>l
 
-" vimdiff => :Diff command! -nargs=1 -complete=file Diff vertical diffsplit <args> 
 " terminal mode
 if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n>
