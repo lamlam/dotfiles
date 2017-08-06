@@ -21,6 +21,7 @@ nnoremap gk k
 
 " mode change command
 imap <C-h> <esc>
+vmap <C-h> <esc>
 nnoremap ; :
 nnoremap : ;
 
