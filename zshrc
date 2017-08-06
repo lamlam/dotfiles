@@ -19,7 +19,7 @@ zstyle ':vcs_info:*' formats '[%F{green}%b%f]'
 zstyle ':vcs_info:*' actionformats '[%F{green}%b%f(%F{red}%a%f)]'
 precmd() { vcs_info }
 PROMPT='[%n@%m]%{${fg[yellow]}%} %~ %{${reset_color}%}${vcs_info_msg_0_}
-% '
+%# '
 RPROMPT=''
 
 # PATH
