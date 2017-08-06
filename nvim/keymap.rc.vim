@@ -5,7 +5,6 @@ nmap <Down> <C-w>j
 nmap <Up> <C-w>k
 nmap <Left> <C-w>h
 nmap <Right> <C-w>l
-
 " terminal mode
 if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n>
@@ -28,3 +27,13 @@ nnoremap : ;
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
+
+" Unite
+if has('nvim')
+    nmap <silent> <C-u><C-p> ;<C-u>Denite file_rec<CR>
+    nmap <silent> <C-u><C-j> ;<C-u>Denite line<CR>
+    nmap <silent> <C-u><C-g> ;<C-u>Denite grep<CR>
+    nmap <silent> <C-u><C-u> ;<C-u>Denite file_mru<CR>
+    nmap <silent> <C-u><C-y> ;<C-u>Denite neoyank<CR>
+    nmap <silent> <C-u>; ;<C-u>Denite -resume -immediately -select=+1<CR>
+endif
