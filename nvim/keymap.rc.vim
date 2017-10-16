@@ -28,6 +28,9 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 
+nmap <C-n> ;bn<CR>
+nmap <c-p> ;bp<CR>
+
 " Unite
 if has('nvim')
     nmap <silent> <C-u><C-p> ;<C-u>Denite file_rec<CR>
