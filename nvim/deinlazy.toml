@@ -99,6 +99,9 @@ repo = 'Shougo/neoyank.vim'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
 # ==========================================================
 # lang
 # ==========================================================
