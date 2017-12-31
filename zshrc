@@ -22,9 +22,6 @@ PROMPT='[%n@%m]%{${fg[yellow]}%} %~ %{${reset_color}%}${vcs_info_msg_0_}
 %# '
 RPROMPT=''
 
-# PATH
-PATH="/Users/koikoi/.rbenv/shims:/usr/local/bin/:${PATH}"
-
 ###################################
 # 補完機能を有効にする
 autoload -Uz compinit
