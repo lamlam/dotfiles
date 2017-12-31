@@ -19,6 +19,7 @@ nnoremap gj j
 nnoremap gk k
 
 " mode change command
+nmap <C-h> <esc>
 imap <C-h> <esc>
 vmap <C-h> <esc>
 nnoremap ; :
