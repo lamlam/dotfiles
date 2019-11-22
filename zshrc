@@ -77,6 +77,11 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
+# docker
+alias d='docker'
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
@@ -94,3 +99,25 @@ case ${OSTYPE} in
         ;;
 esac
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+source ~/.zshenv
+
+### zplug
+source ~/.zplug/init.zsh
+
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
