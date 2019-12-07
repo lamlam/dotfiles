@@ -7,6 +7,7 @@ SAVEHIST=1000000
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt NO_BEEP
+setopt IGNOREEOF
 
 # https://qiita.com/mollifier/items/40d57e1da1b325903659
 autoload -Uz colors
@@ -37,4 +38,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias g='git'
+
+# for anyenv
+eval "$(anyenv init -)"
 
