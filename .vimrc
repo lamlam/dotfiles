@@ -63,3 +63,11 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+filetype plugin on
+" https://vim-jp.org/vimdoc-ja/pi_netrw.html
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+let g:netrw_sizestyle="H"
+let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
+let g:netrw_preview=1
+
