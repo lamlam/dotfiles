@@ -42,3 +42,6 @@ alias g='git'
 # for anyenv
 eval "$(anyenv init -)"
 
+# for fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
