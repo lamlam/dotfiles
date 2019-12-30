@@ -45,3 +45,7 @@ eval "$(anyenv init -)"
 # for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+export GOPATH="$HOME/go"
+export PATH=$PATH:$(go env GOPATH)/bin
+
