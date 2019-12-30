@@ -21,6 +21,7 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'mattn/vim-goimports'
 call plug#end()
 """""" end vim-plug
 
@@ -74,4 +75,6 @@ let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
 let g:netrw_preview=1
 let g:netrw_altv=1
 let g:netrw_winsize=70
+
+let g:asyncomplete_popup_delay=200
 
