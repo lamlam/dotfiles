@@ -30,12 +30,28 @@ PROMPT='[%n@%m]%{${fg[yellow]}%} %~ %{${reset_color}%}${vcs_info_msg_0_}
 %# '
 RPROMPT=''
 
-
+export CLICOLOR=1
+alias ls='ls -G -F'
 alias la='ls -a'
 alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+eval "$(hub alias -s)"
+cdg() {
+    local selected
+    selected=$(ghq list | fzf)
+
+    if [ "x$selected" != "x" ]; then
+        cd $(ghq root)/$selected
+    fi
+}
+ghopen() {
+    local github_repo
+    github_repo=$(git remote get-url origin | rev | cut -d '/' -f 1,2 | rev | cut -d '.' -f 1)
+    hub browse $github_repo
+}
 
 alias g='git'
 
