@@ -58,6 +58,7 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gh <plug>(lsp-hover)
 endfunction
 
 augroup lsp_install
@@ -77,4 +78,5 @@ let g:netrw_altv=1
 let g:netrw_winsize=70
 
 let g:asyncomplete_popup_delay=200
+let g:lsp_text_edit_enabled=0
 
