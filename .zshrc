@@ -39,7 +39,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 eval "$(hub alias -s)"
-cdg() {
+ghcd() {
     local selected
     selected=$(ghq list | fzf)
 
