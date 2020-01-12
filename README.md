@@ -1,5 +1,10 @@
+# Dotfiles
+Keep minimum
 
-# Setting policy
-* Keep minimum
-* Always need reference document of configuration
+## Installetion
+Set up symbolic link by script.
+
+```
+$ ./install.sh
+```
 
