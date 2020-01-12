@@ -18,4 +18,6 @@ brew "tig"
 brew "vim"
 brew "zsh"
 brew "sanemat/font/ricty", args: ["with-powerline"]
+brew "ghq"
+brew "hub"
 
