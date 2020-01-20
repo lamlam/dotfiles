@@ -80,3 +80,9 @@ let g:netrw_winsize=70
 let g:asyncomplete_popup_delay=200
 let g:lsp_text_edit_enabled=0
 
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>
+set hidden
+
+inoremap <silent> jj <ESC>
+
