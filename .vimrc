@@ -22,6 +22,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/vim-goimports'
+Plug 'lambdalisue/fern.vim'
 call plug#end()
 """""" end vim-plug
 
@@ -35,9 +36,9 @@ if executable('typescript-language-server')
 endif
 
 " https://vim-jp.org/vimdoc-ja/usr_30.html#30.5
-set tabstop=4
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 
 " https://vim-jp.org/vimdoc-ja/usr_30.html#30.4
