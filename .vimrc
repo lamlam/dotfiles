@@ -23,6 +23,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/vim-goimports'
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-renderer-devicons.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 """""" end vim-plug
 
@@ -54,6 +56,8 @@ set noswapfile
 
 set number
 
+" ---
+" lsp setting
 " https://github.com/prabirshrestha/vim-lsp
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -68,7 +72,30 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+let g:asyncomplete_popup_delay=200
+let g:lsp_text_edit_enabled=0
+
+" ---
+
 filetype plugin on
+
+" ---
+" set up fern customaization
+" https://github.com/lambdalisue/fern.vim
+function! s:init_fern() abort
+  " Use 'select' instead of 'edit' for default 'open' action
+  nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+
+let g:fern#renderer = "devicons"
+set encoding=UTF-8
+" ---
+
 " https://vim-jp.org/vimdoc-ja/pi_netrw.html
 let g:netrw_liststyle=3
 let g:netrw_banner=0
@@ -77,9 +104,6 @@ let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
 let g:netrw_preview=1
 let g:netrw_altv=1
 let g:netrw_winsize=70
-
-let g:asyncomplete_popup_delay=200
-let g:lsp_text_edit_enabled=0
 
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
