@@ -85,6 +85,7 @@ filetype plugin on
 function! s:init_fern() abort
   " Use 'select' instead of 'edit' for default 'open' action
   nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
+  set nonumber
 endfunction
 
 augroup fern-custom
