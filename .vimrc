@@ -112,3 +112,4 @@ set hidden
 
 inoremap <silent> jj <ESC>
 
+set incsearch
