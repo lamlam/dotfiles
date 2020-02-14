@@ -55,6 +55,8 @@ ghopen() {
 
 alias g='git'
 
+alias vim.='vim -c "Fern . -drawer"'
+
 # for anyenv
 eval "$(anyenv init -)"
 
