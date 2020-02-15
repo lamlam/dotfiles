@@ -93,8 +93,10 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup END
 
-let g:fern#renderer = "devicons"
 set encoding=UTF-8
+let g:fern#renderer="devicons"
+let g:fern#default_hidden=1
+let g:fern#default_exclude="^\\%(\\.git\\|node_modules\\)$"
 " ---
 
 " https://vim-jp.org/vimdoc-ja/pi_netrw.html
