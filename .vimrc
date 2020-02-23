@@ -72,9 +72,20 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+augroup LspEFM
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'efm-langserver',
+      \ 'cmd': {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml']},
+      \ 'whitelist': ['typescript', 'javascript'],
+      \ })
+augroup END
+
 let g:asyncomplete_popup_delay=200
 let g:lsp_text_edit_enabled=0
-
+let g:lsp_settings_typescript = ['typescript-language-server', 'efm-langserver']
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
 " ---
 
 filetype plugin on
