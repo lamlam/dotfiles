@@ -38,19 +38,17 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-eval "$(hub alias -s)"
 ghcd() {
     local selected
     selected=$(ghq list | fzf)
 
     if [ "x$selected" != "x" ]; then
-        cd $(ghq root)/$selected
+        if [ -e $(ghq root)/$selected ]; then
+          cd $(ghq root)/$selected
+        else
+          cd $GOPATH/src/$selected
+        fi
     fi
-}
-ghopen() {
-    local github_repo
-    github_repo=$(git remote get-url origin | rev | cut -d '/' -f 1,2 | rev | cut -d '.' -f 1)
-    hub browse $github_repo
 }
 
 alias g='git'
