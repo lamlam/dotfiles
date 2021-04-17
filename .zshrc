@@ -61,7 +61,10 @@ eval "$(anyenv init -)"
 # for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# for gcloud
+source "/Users/koikoi/google-cloud-sdk/path.zsh.inc"
+source "/Users/koikoi/google-cloud-sdk/completion.zsh.inc"
 
 export GOPATH="$HOME/go"
 export PATH=$PATH:$(go env GOPATH)/bin
-
+export PATH=$PATH:$HOME/.cargo/bin
