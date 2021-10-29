@@ -8,6 +8,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt NO_BEEP
 setopt IGNOREEOF
+setopt SHARE_HISTORY
 
 # https://qiita.com/mollifier/items/40d57e1da1b325903659
 autoload -Uz colors
