@@ -14,6 +14,17 @@ setopt SHARE_HISTORY
 autoload -Uz colors
 colors
 
+# homebrew M1 build
+if type /opt/homebrew/bin/brew
+then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+if type brew &>/dev/null
+then
+    # https://docs.brew.sh/Shell-Completion
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 # http://zsh.sourceforge.net/Guide/zshguide06.html#l144
 autoload -Uz compinit
 compinit
@@ -32,6 +43,38 @@ PROMPT='[%n@%m %D{%H:%M:%S}]%{${fg[yellow]}%} %~ %{${reset_color}%}${vcs_info_ms
 RPROMPT=''
 
 export CLICOLOR=1
+
+
+# fzf
+if type fzf &> /dev/null
+then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
+# go
+if type go &> /dev/null
+then
+    export GOPATH="$HOME/go"
+    export PATH=$PATH:$(go env GOPATH)/bin
+fi
+
+if type ghq &> /dev/null
+then
+    ghcd() {
+        local selected
+        selected=$(ghq list | fzf)
+    
+        if [ "x$selected" != "x" ]; then
+            if [ -e $(ghq root)/$selected ]; then
+              cd $(ghq root)/$selected
+            else
+              cd $GOPATH/src/$selected
+            fi
+        fi
+    }
+fi
+
+alias g='git'
 alias ls='ls -G -F'
 alias la='ls -a'
 alias ll='ls -l'
@@ -39,33 +82,3 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-ghcd() {
-    local selected
-    selected=$(ghq list | fzf)
-
-    if [ "x$selected" != "x" ]; then
-        if [ -e $(ghq root)/$selected ]; then
-          cd $(ghq root)/$selected
-        else
-          cd $GOPATH/src/$selected
-        fi
-    fi
-}
-
-alias g='git'
-
-alias vim.='vim -c "Fern . -drawer"'
-
-# for anyenv
-eval "$(anyenv init -)"
-
-# for fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# for gcloud
-source "/Users/koikoi/google-cloud-sdk/path.zsh.inc"
-source "/Users/koikoi/google-cloud-sdk/completion.zsh.inc"
-
-export GOPATH="$HOME/go"
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:$HOME/.cargo/bin
