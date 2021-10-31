@@ -75,10 +75,7 @@ then
 fi
 
 alias g='git'
-alias ls='ls -G -F'
-alias la='ls -a'
-alias ll='ls -l'
+alias l='exa -lha'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-
