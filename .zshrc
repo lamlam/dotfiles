@@ -15,7 +15,7 @@ autoload -Uz colors
 colors
 
 # homebrew M1 build
-if type /opt/homebrew/bin/brew
+if type /opt/homebrew/bin/brew &> /dev/null
 then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
