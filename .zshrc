@@ -74,8 +74,15 @@ then
     }
 fi
 
+# runtime manager https://github.com/asdf-vm/asdf
+if type asdf &> /dev/null
+then
+    . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
+
 alias g='git'
 alias l='exa -lha'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
