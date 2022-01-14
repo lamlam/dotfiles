@@ -77,7 +77,7 @@ fi
 # runtime manager https://github.com/asdf-vm/asdf
 if type asdf &> /dev/null
 then
-    . /opt/homebrew/opt/asdf/libexec/asdf.sh
+    . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
 alias g='git'
