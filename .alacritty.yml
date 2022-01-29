@@ -1,5 +1,11 @@
+
 font:
   size: 16.0
+
+window:
+  padding:
+    x: 10
+
 # Colors (Nord)
 colors:
   # Default colors
@@ -28,3 +34,7 @@ colors:
     magenta: '0xB48EAD'
     cyan:    '0x8FBCBB'
     white:   '0xECEFF4'
+
+key_bindings:
+  # Remove default keymap for ClearHistory
+  - { key: K, mods: Command, mode: ~Vi|~Search, action: None }
