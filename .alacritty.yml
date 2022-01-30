@@ -8,6 +8,7 @@ window:
     lines: 30
   padding:
     x: 10
+    y: 5
 
 # Colors (Nord)
 colors:
