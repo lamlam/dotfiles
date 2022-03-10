@@ -7,8 +7,11 @@ window:
     columns: 100
     lines: 30
   padding:
-    x: 10
-    y: 5
+    x: 0
+    y: 0
+
+selection:
+  save_to_clipboard: true
 
 # Colors (Nord)
 colors:
