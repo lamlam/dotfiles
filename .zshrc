@@ -85,6 +85,8 @@ then
     . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
+source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+
 export PATH=$PATH:$HOME/.cargo/bin
 
 alias g='git'
