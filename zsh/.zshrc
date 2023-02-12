@@ -1,7 +1,7 @@
 export LANG=ja_JP.UTF-8
 
 # http://zsh.sourceforge.net/Guide/zshguide02.html#init
-HISTFILE=~/.zsh_history
+HISTFILE=$XDG_CACHE_HOME/zsh/hisotry
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt HIST_IGNORE_ALL_DUPS
@@ -86,6 +86,9 @@ then
 fi
 
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+
+# gpg
+export GPG_TTY=$(tty)
 
 export PATH=$PATH:$HOME/.cargo/bin
 
