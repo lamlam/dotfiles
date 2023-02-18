@@ -33,17 +33,23 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:*' formats '[%F{green}%b%f]'
-zstyle ':vcs_info:*' actionformats '[%F{green}%b%f(%F{red}%a%f)]'
-precmd() { vcs_info }
-PROMPT='%{${fg[yellow]}%}%~ %{${reset_color}%}${vcs_info_msg_0_}
-%# '
-RPROMPT=''
-
 export CLICOLOR=1
 
+# starship
+if type starship &> /dev/null
+then
+  eval "$(starship init zsh)"
+elif
+then
+  autoload -Uz vcs_info
+  setopt prompt_subst
+  zstyle ':vcs_info:*' formats '[%F{green}%b%f]'
+  zstyle ':vcs_info:*' actionformats '[%F{green}%b%f(%F{red}%a%f)]'
+  precmd() { vcs_info }
+  PROMPT='%{${fg[yellow]}%}%~ %{${reset_color}%}${vcs_info_msg_0_}
+  %# '
+  RPROMPT=''
+fi
 
 # fzf
 if type fzf &> /dev/null
@@ -86,6 +92,9 @@ then
 fi
 
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+
+# gpg
+export GPG_TTY=$(tty)
 
 export PATH=$PATH:$HOME/.cargo/bin
 
