@@ -91,6 +91,8 @@ then
     . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
+# abbr
+ABBR_USER_ABBREVIATIONS_FILE=$HOME/dotfiles/user-abbreviations
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
 
 # gpg
@@ -98,10 +100,8 @@ export GPG_TTY=$(tty)
 
 export PATH=$PATH:$HOME/.cargo/bin
 
-alias g='git'
 alias l='exa -lha'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias k='kubectl'
