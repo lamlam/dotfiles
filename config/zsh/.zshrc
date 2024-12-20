@@ -1,9 +1,8 @@
-export LANG=ja_JP.UTF-8
 
-# http://zsh.sourceforge.net/Guide/zshguide02.html#init
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt NO_BEEP
@@ -27,7 +26,7 @@ fi
 
 # http://zsh.sourceforge.net/Guide/zshguide06.html#l144
 autoload -Uz compinit
-compinit
+compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
 
 setopt auto_cd
 setopt auto_pushd
