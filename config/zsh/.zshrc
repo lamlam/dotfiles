@@ -37,6 +37,7 @@ export CLICOLOR=1
 # starship
 if type starship &> /dev/null
 then
+  export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
   eval "$(starship init zsh)"
 elif
 then
