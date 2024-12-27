@@ -92,7 +92,6 @@ then
 fi
 
 # abbr
-ABBR_USER_ABBREVIATIONS_FILE=$HOME/dotfiles/user-abbreviations
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
 
 # gpg
