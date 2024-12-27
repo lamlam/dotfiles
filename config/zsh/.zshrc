@@ -1,17 +1,18 @@
 
+# zsh
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export HISTSIZE=1000000
 export SAVEHIST=1000000
-
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt NO_BEEP
 setopt IGNOREEOF
 setopt SHARE_HISTORY
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
 
-# https://qiita.com/mollifier/items/40d57e1da1b325903659
-autoload -Uz colors
-colors
+export CLICOLOR=1
 
 # homebrew M1 build
 if type /opt/homebrew/bin/brew &> /dev/null
@@ -27,12 +28,6 @@ fi
 # http://zsh.sourceforge.net/Guide/zshguide06.html#l144
 autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
-
-setopt auto_cd
-setopt auto_pushd
-setopt pushd_ignore_dups
-
-export CLICOLOR=1
 
 # starship
 if type starship &> /dev/null
