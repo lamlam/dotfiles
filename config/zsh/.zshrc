@@ -1,4 +1,3 @@
-
 # zsh
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export HISTSIZE=1000000
@@ -24,6 +23,8 @@ then
     # https://docs.brew.sh/Shell-Completion
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
+
+eval "$(sheldon source)"
 
 # http://zsh.sourceforge.net/Guide/zshguide06.html#l144
 autoload -Uz compinit
