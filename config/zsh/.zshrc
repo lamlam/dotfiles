@@ -87,9 +87,6 @@ then
     . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
-# abbr
-source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
-
 # gpg
 export GPG_TTY=$(tty)
 
