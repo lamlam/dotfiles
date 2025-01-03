@@ -21,10 +21,16 @@ apply = ["defer"]
 github = "olets/zsh-abbr"
 apply = ["defer"]
 
+## local plugins
 [plugins.fzf]
 local = "~/.config/zsh"
 use = ["fzf.zsh"]
 apply = ["defer"]
+
+# Do not apply defer to load synchronously
+[plugins.prompt]
+local = "~/.config/zsh"
+use = ["prompt.zsh"]
 
 # the `apply` field is not supported by inline plugins
 [plugins.compinit]
