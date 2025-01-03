@@ -25,3 +25,10 @@ apply = ["defer"]
 local = "~/.config/zsh"
 use = ["fzf.zsh"]
 apply = ["defer"]
+
+# the `apply` field is not supported by inline plugins
+[plugins.compinit]
+inline = """
+autoload -Uz compinit
+zsh-defer compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
+"""

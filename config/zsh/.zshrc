@@ -24,11 +24,11 @@ then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-eval "$(sheldon source)"
-
-# http://zsh.sourceforge.net/Guide/zshguide06.html#l144
-autoload -Uz compinit
-compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump"
+# sheldon zsh plugin manager
+if type sheldon &>/dev/null
+then
+    eval "$(sheldon source)"
+fi
 
 # starship
 if type starship &> /dev/null
