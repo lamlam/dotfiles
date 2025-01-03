@@ -40,22 +40,6 @@ then
     export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
-if type ghq &> /dev/null
-then
-    ghcd() {
-        local selected
-        selected=$(ghq list | fzf)
-    
-        if [ "x$selected" != "x" ]; then
-            if [ -e $(ghq root)/$selected ]; then
-              cd $(ghq root)/$selected
-            else
-              cd $GOPATH/src/$selected
-            fi
-        fi
-    }
-fi
-
 # runtime manager https://github.com/asdf-vm/asdf
 if type asdf &> /dev/null
 then
