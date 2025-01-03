@@ -20,3 +20,8 @@ apply = ["defer"]
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
 apply = ["defer"]
+
+[plugins.fzf]
+local = "~/.config/zsh"
+use = ["fzf.zsh"]
+apply = ["defer"]

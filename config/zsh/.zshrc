@@ -47,16 +47,6 @@ then
   RPROMPT=''
 fi
 
-# fzf
-if type fzf &> /dev/null
-then
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-    if type fd &> /dev/null
-    then
-        export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-    fi
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-fi
 
 # go
 if type go &> /dev/null
