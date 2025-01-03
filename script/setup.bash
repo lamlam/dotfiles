@@ -11,6 +11,7 @@ mkdir -p "$XDG_STATE_HOME"
 mkdir -p "$XDG_CACHE_HOME"
 mkdir -p "$XDG_DATA_HOME"
 
+export SCRIPT_DIR=""$(cd "$(dirname "$0")" || exit 1; pwd)""
 export REPO_DIR="$(cd "$(dirname "$0")/.." || exit 1; pwd)"
 
 ln -sfv "$REPO_DIR/config/"* "$XDG_CONFIG_HOME"
@@ -20,3 +21,6 @@ ln -sfv "$XDG_CONFIG_HOME/zsh/.zshenv" "$HOME/.zshenv"
 mkdir -p "$XDG_STATE_HOME/zsh" 
 mkdir -p "$XDG_CACHE_HOME/zsh"
 mkdir -p "$XDG_DATA_HOME/zsh"
+
+# other
+/bin/bash "$SCRIPT_DIR/setup-mac.bash"

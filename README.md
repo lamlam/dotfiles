@@ -15,5 +15,4 @@ TODO
 - nodejs
 - docker
 - raycast
-- ghq
 - alias
