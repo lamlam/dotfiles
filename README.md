@@ -9,8 +9,6 @@ TODO
 - gitconfig
 - vim
 - tmux
-- asdf or nvm
-- nodejs
 - docker
 - raycast
 - alias

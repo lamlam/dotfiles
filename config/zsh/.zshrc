@@ -51,12 +51,6 @@ else
     source $ZDOTDIR/prompt.zsh
 fi
 
-# runtime manager https://github.com/asdf-vm/asdf
-if type asdf &> /dev/null
-then
-    . $(brew --prefix asdf)/libexec/asdf.sh
-fi
-
 # gpg
 export GPG_TTY=$(tty)
 
