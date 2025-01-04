@@ -8,7 +8,6 @@ TODO
 - homebrew
 - gitconfig
 - vim
-- tmux
 - docker
 - raycast
 - alias
