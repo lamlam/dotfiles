@@ -10,8 +10,6 @@ TODO
 - vim
 - tmux
 - asdf or nvm
-- go
-- rust
 - nodejs
 - docker
 - raycast

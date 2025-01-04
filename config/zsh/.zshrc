@@ -1,4 +1,24 @@
 # zsh
+# set ignore duplicates
+typeset -gU PATH path
+typeset -gU FPATH fpath
+
+# system path
+path=(
+    '/usr/local/bin'(N-/)
+    '/usr/bin'(N-/)
+    '/bin'(N-/)
+    '/usr/sbin'(N-/)
+    '/sbin'(N-/)
+)
+
+# user defined path
+path=(
+    "$GOPATH/bin"(N-/)
+    "$CARGO_HOME/bin"(N-/)
+    "$path[@]"
+)
+
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export HISTSIZE=1000000
 export SAVEHIST=1000000
@@ -33,13 +53,6 @@ else
     source $ZDOTDIR/prompt.zsh
 fi
 
-# go
-if type go &> /dev/null
-then
-    export GOPATH="$HOME/go"
-    export PATH=$PATH:$(go env GOPATH)/bin
-fi
-
 # runtime manager https://github.com/asdf-vm/asdf
 if type asdf &> /dev/null
 then
@@ -49,10 +62,7 @@ fi
 # gpg
 export GPG_TTY=$(tty)
 
-export PATH=$PATH:$HOME/.cargo/bin
-
 alias l='exa -lha'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-

@@ -8,3 +8,10 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# go
+export GOPATH="$XDG_DATA_HOME/go"
+
+# rust
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
