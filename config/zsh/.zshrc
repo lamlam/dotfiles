@@ -31,8 +31,6 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-export CLICOLOR=1
-
 # homebrew M1 build
 if type /opt/homebrew/bin/brew &> /dev/null
 then
@@ -65,7 +63,9 @@ export GPG_TTY=$(tty)
 # remove less history file
 export LESSHISTFILE=-
 
-alias l='exa -lha'
+alias ls='eza'
+alias ll='eza -lha'
+alias tree='eza --tree'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
