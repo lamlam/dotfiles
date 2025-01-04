@@ -62,6 +62,9 @@ fi
 # gpg
 export GPG_TTY=$(tty)
 
+# remove less history file
+export LESSHISTFILE=-
+
 alias l='exa -lha'
 alias rm='rm -i'
 alias cp='cp -i'
