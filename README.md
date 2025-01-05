@@ -6,7 +6,6 @@
 TODO
 
 - homebrew
-- gitconfig
 - vim
 - docker
 - raycast
