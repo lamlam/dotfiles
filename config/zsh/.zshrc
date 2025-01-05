@@ -31,6 +31,11 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+zshaddhistory() {
+    local line="${1%%$'\n'}"
+    [[ ! "$line" =~ "^(cd|ll|ls|rm|rmdir|git commit)($| )" ]]
+}
+
 # homebrew M1 build
 if type /opt/homebrew/bin/brew &> /dev/null
 then
