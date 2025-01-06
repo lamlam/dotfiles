@@ -1,19 +1,12 @@
-# Dotfiles
-
-## Installation
-
-Set up symbolic link by script.
 
 ```
-$ ./install.sh
+./script/setup.bash
 ```
 
-## How to update config
+TODO
 
-### brew
-
-Update Brewfile and commit it
-
-```
-$ brew bundle --force
-```
+- homebrew
+- vim
+- docker
+- raycast
+- alias
