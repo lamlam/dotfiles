@@ -24,3 +24,4 @@ mkdir -p "$XDG_DATA_HOME/zsh"
 
 # other
 /bin/bash "$SCRIPT_DIR/setup-mac.bash"
+# /bin/bash "$SCRIPT_DIR/setup-homebrew.bash"
