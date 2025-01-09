@@ -10,4 +10,4 @@ else
 fi
 
 export REPO_DIR="$(cd "$(dirname "$0")/.." || exit 1; pwd)"
-brew bundle install --file="$REPO_DIR/config/Brewfile"
+brew bundle install --file="$REPO_DIR/config/homebrew/Brewfile"
