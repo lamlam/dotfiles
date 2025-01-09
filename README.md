@@ -1,4 +1,3 @@
-
 # My Dotfiles
 
 ## setup
@@ -9,6 +8,18 @@ clone this repository and exec setup script
 ./script/setup.bash
 ```
 
+### Homebrew
+
+Homebrew-related scripts need to be executed separately.
+
+```bash
+# insatll
+/bin/bash script/setup-homebrew.bash
+
+# backup
+/bin/bash script/dump-homebrew.bash
+```
+
 ## TODO
 
 - homebrew
@@ -17,7 +28,7 @@ clone this repository and exec setup script
 - raycast
 - alias
 
-## 参考
+## Reference
 
 [dotfilesのこだわりを晒す \- エムスリーテックブログ](https://www.m3tech.blog/entry/dotfiles-bonsai)
 
