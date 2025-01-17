@@ -17,16 +17,26 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin(data_dir . '/plugged')
 
+" fzf
 Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
+
+" theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
+
+" lsp
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
 
 " theme
 set termguicolors
 syntax enable
+let g:dracula_italic = 0
 colorscheme dracula
 let g:airline_theme='dracula'
 
