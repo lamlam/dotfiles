@@ -21,7 +21,11 @@ function toggleTerminalEditor()
     local editor = hs.application.get("com.microsoft.VSCode")
     if terminal then
         if terminal:isFrontmost() then
-            editor:activate()
+	    if editor then
+            	editor:activate()
+	    else
+                terminal:hide()
+	    end
         else
             terminal:activate()
         end
