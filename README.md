@@ -23,7 +23,6 @@ Homebrew-related scripts need to be executed separately.
 ## TODO
 
 - homebrew
-- vim
 - docker
 - raycast
 - alias

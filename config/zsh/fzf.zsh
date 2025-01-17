@@ -4,7 +4,8 @@ then
     source <(fzf --zsh)
     if type fd &> /dev/null
     then
-        export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+        export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+        export FZF_DEFAULT_OPTS='-m'
     fi
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
