@@ -15,3 +15,7 @@ export GOPATH="$XDG_DATA_HOME/go"
 # rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# asdf
+export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
+

@@ -22,15 +22,6 @@ use = ["{{ name }}.zsh"]
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
 
-[plugins.asdf]
-github = "asdf-vm/asdf"
-use = ["asdf.sh"] # To prevent loading unnecessary files by default glob pattern matching
-hooks.pre = """
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/asdfrc"
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-"""
-apply = ["env_asdf_dir", "defer"] # Define ASDF_DIR before source asdf.sh
-
 ## local plugins
 [plugins.fzf]
 local = "~/.config/zsh"

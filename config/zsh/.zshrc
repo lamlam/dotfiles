@@ -16,6 +16,7 @@ path=(
 path=(
     "$GOPATH/bin"(N-/)
     "$CARGO_HOME/bin"(N-/)
+    "$ASDF_DATA_DIR/shims"(N-/)
     "$path[@]"
 )
 
