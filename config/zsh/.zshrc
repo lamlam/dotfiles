@@ -48,6 +48,12 @@ then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
+# nodejs global module
+if type asdf &> /dev/null
+then
+    PATH=$PATH:`npm prefix --location=global`/bin
+fi
+
 # sheldon zsh plugin manager
 if type sheldon &>/dev/null
 then
