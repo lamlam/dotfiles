@@ -27,6 +27,10 @@ github = "olets/zsh-abbr"
 local = "~/.config/zsh"
 use = ["fzf.zsh"]
 
+[plugins.alias]
+local = "~/.config/zsh"
+use = ["alias.zsh"]
+
 # Do not apply defer to load synchronously
 [plugins.prompt]
 local = "~/.config/zsh"
